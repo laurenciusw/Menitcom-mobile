@@ -1,0 +1,116 @@
+{
+  "User": [
+    {
+      "id": 1,
+      "email": "example@mail.com",
+      "password": "123456",
+      "role": "Admin",
+      "phoneNumber": "123-456-7777",
+      "address": "123 Example Street, City, State, ZIP"
+    }
+  ],
+  "Post": [
+    {
+      "id": 1,
+      "title": "Rusia Terus Gempur Ukraina, 3 Orang Tewas di Odesa",
+      "slug": "rusia-terus-gempur-ukraina-3-orang-tewas-di-odesa",
+      "content": "Pasukan Rusia menembakkan empat rudal Kalibr dari sebuah kapal di Laut Hitam, setidaknya 3 orang tewas",
+      "imgUrl": "https://akcdn.detik.net.id/community/media/visual/2023/05/27/bangunan-yang-menjadi-lokasi-klinik-medis-di-dnipro-ukraina-hancur-akibat-serangan-rudal-rusia_169.jpeg?w=700&q=90",
+      "categoryId": 1
+      
+    },
+    {
+      "id": 2,
+      "title": "KPK Selidiki Kasus Dugaan Korupsi di Kementerian Pertanian",
+      "slug": "kpk-selidiki-kasus-dugaan-korupsi-di-kementerian-pertanian",
+      "content": "KPK ternyata sedang menyelidiki kasus dugaan korupsi di Kementerian Pertanian (Kementan). KPK sudah meminta keterangan sejumlah orang terkait kasus di kementerian yang saat ini dipimpin Syahrul Yasin Limpo itu",
+      "imgUrl": "https://akcdn.detik.net.id/community/media/visual/2021/03/02/gedung-baru-kpk-2_169.jpeg?w=700&q=90",
+      "categoryId": 1
+      
+    },
+    {
+      "id": 3,
+      "title": "Putin Pertimbangkan Kembali Lancarkan Serangan Rebut Ibu Kota Ukraina",
+      "slug": "putin-pertimbangkan-kembali-lancarkan-serangan-rebut-ibu-kota-ukraina",
+      "content": "Presiden Rusia Vladimir Putin tampaknya tengah mempertimbangkan untuk kembali melancarkan serangan guna merebut Kiev, ibu kota Ukraina. Pasukan militer Moskow telah gagal merebut dan menguasai ibu kota Ukraina itu pada awal-awal invasi setahun lalu",
+      "imgUrl": "https://akcdn.detik.net.id/community/media/visual/2023/06/14/vladimir-putin_169.jpeg?w=700&q=90",
+      "categoryId": 1
+      
+    },
+    {
+      "id": 4,
+      "title": "Bertambah, Jumlah Jemaah Haji Wafat Capai 58 Orang",
+      "slug": "bertambah-jumlah-jemaah-haji-wafat-capai-58-orang",
+      "content": "Kementerian Agama (Kemenag) melaporkan, jumlah jemaah haji meninggal dunia di Arab Saudi bertambah 4 orang, sehingga totalnya mencapai 58 orang hingga 13 Juni 2023",
+      "imgUrl": "https://asset.kompas.com/crops/S8lCjCW6E7efdC2swxnWGUcDW04=/28x12:643x422/750x500/data/photo/2023/02/28/63fe080fcbeb5.png",
+      "categoryId": 2
+      
+    },
+    {
+      "id": 5,
+      "title": "Mario Dandy Keberatan Jonathan Latumahina Sebut Rafael Alun Ikut Atur soal Hukuman, Ayah David Ozora: Noh, Lawyer Shane Ngomong Juga",
+      "slug": "mario-dandy-keberatan-jonathan-latumahina-sebut-rafael-alun-ikut-atur-soal-hukuman-ayah-david-ozora-noh-lawyer-shane-ngomong-juga",
+      "content": "Jonathan Latumahina, sempat menyebutkan bahwa ia mendengar bahwa Mario Dandy menjanjikan kepada kedua rekannya, Shane Lukas dan AG untuk tenang karena ayahnya, Rafael Alun Trisambodo (RAT) bakal menjamin hukuman ringan kepada mereka",
+      "imgUrl": "https://media.suara.com/suara-partners/metro/thumbs/653x367/2023/05/31/1-tangkapan-layar-video-viral-yang-menunjukkan-mario-dandy-meminta-maaf-atas-aksi-penganiayaan-sambil-tersenyum.jpg",
+      "categoryId": 2
+      
+    },
+    {
+      "id": 6,
+      "title": "Putri Ariani Cerita Sering Di-bully hingga Tak Punya Teman karena Penyandang Disabilitas",
+      "slug": "putri-ariani-cerita-sering-di-bully-hingga-tak-punya-teman-karena-penyandang-disabilitas",
+      "content": "Putri Ariani merupakan penyandang tunanetra total. Dia tak bisa melihat sejak bayi karena lahir di usia prematur. Kondisi ini membuatnya sering kali dirundung oleh teman-temannya dari kecil, bahkan hingga saat ini",
+      "imgUrl": "https://akcdn.detik.net.id/api/wm/2023/06/13/rumah-putri-ariani-3_169.jpeg",
+      "categoryId": 3
+      
+    },
+    {
+      "id": 7,
+      "title": "Organ Park Soo Ryun Didonorkan, Orangtuanya Merasa Tenang karena Jantung Mendiang Tetap Berdetak untuk Orang yang Membutuhkan",
+      "slug": "organ-park-soo-ryun-didonorkan-orangtuanya-merasa-tenang-karena-jantung-mendiang-tetap-berdetak-untuk-orang-yang-membutuhkan",
+      "content": "Kepergian aktris Korea Selatan Park Soo Ryun untuk selamanya secara mendadak, tak hanya memicu kesedihan di benak publik. Namun juga rasa haru. Terutama atas keputusan orangtua mendiang yang mengambil langkah mendonorkan organ sang anak",
+      "imgUrl": "https://www.pilar.id/wp-content/uploads/2023/06/img-pilar-153.jpg",
+      "categoryId": 3
+      
+    }
+  ],
+  "Category": [
+    {
+      "id": 1,
+      "name": "International"
+    },
+    {
+      "id": 2,
+      "name": "Kesehatan"
+    },
+    {
+      "id": 3,
+      "name": "Nasional"
+    },
+    {
+      "id": 4,
+      "name": "Sport"
+    },
+    {
+      "id": 5,
+      "name": "Tech"
+    }
+  ],
+  "Tags": [
+    {
+      "id": 1,
+      "postId": 1,
+      "name": "Rusia"
+    },
+    {
+      "id": 2,
+      "postId": 3,
+      "name": "Putin"
+    },
+    {
+      "id": 3,
+      "postId": 5,
+      "name": "Mario"
+    }
+  ]
+}
