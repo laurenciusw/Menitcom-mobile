@@ -3,20 +3,10 @@ const { Post, Category, User, Tag, sequelize } = require("../models");
 class PostController {
   static async posts(req, res, next) {
     try {
-      const data = await Post.findAll({
-        include: [
-          { model: Category },
-          {
-            model: User,
-            attributes: {
-              exclude: ["password"],
-            },
-          },
-          { model: Tag, as: "tags" },
-        ],
+      const posts = await Post.findAll({
+        include: [{ model: Category }, { model: Tag, as: "tags" }],
       });
-
-      res.status(200).json(data);
+      res.status(200).json(posts);
     } catch (error) {
       next(error);
     }
@@ -27,18 +17,8 @@ class PostController {
       const { id } = req.params;
 
       const post = await Post.findByPk(id, {
-        include: [
-          { model: Category },
-          {
-            model: User,
-            attributes: {
-              exclude: ["password"],
-            },
-          },
-          { model: Tag, as: "tags" },
-        ],
+        include: [{ model: Category }, { model: Tag, as: "tags" }],
       });
-
       if (!post) throw { name: "NotFound" };
 
       res.status(200).json(post);
@@ -48,11 +28,11 @@ class PostController {
   }
 
   static async createPost(req, res, next) {
-    const { title, content, imgUrl, categoryId, tags } = req.body;
+    const { title, content, imgUrl, categoryId, tags, userMongoId } = req.body;
     const transaction = await sequelize.transaction();
     try {
       const post = await Post.create(
-        { title, content, imgUrl, categoryId, authorId: req.user.id },
+        { title, content, imgUrl, categoryId, userMongoId },
         { transaction }
       );
 
@@ -69,6 +49,7 @@ class PostController {
       res.status(201).json(post);
     } catch (error) {
       await transaction.rollback();
+      console.log(error);
       next(error);
     }
   }
