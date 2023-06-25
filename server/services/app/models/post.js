@@ -67,5 +67,6 @@ module.exports = (sequelize, DataTypes) => {
   Post.beforeCreate((post) => {
     post.slug = createSlug(post.title);
   });
+
   return Post;
 };

@@ -27,9 +27,10 @@ router.get("/", async (req, res) => {
 
         post.User = user;
       });
+
       await Promise.all(userRequests);
 
-      await redis.set("posts", JSON.stringify(posts));
+      await redis.set("posts", JSON.stringify());
       res.status(200).json(posts);
     }
   } catch (error) {

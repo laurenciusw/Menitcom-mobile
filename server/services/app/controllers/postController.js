@@ -30,6 +30,7 @@ class PostController {
   static async createPost(req, res, next) {
     const { title, content, imgUrl, categoryId, tags, userMongoId } = req.body;
     const transaction = await sequelize.transaction();
+
     try {
       const post = await Post.create(
         { title, content, imgUrl, categoryId, userMongoId },
@@ -46,6 +47,7 @@ class PostController {
       await Tag.bulkCreate(formattedTags, { transaction });
 
       await transaction.commit();
+
       res.status(201).json(post);
     } catch (error) {
       await transaction.rollback();
