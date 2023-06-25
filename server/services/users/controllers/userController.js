@@ -1,16 +1,13 @@
 const MongoDBconnection = require("../config/mongoConnection");
 const { ObjectId } = require("mongodb");
+const User = require("../models/user");
 
 class UserController {
   //get all user
   static async allUser(req, res) {
     try {
       const { db } = MongoDBconnection;
-      const users = await db
-        .collection("users")
-        .find()
-        .project({ password: 0 })
-        .toArray();
+      const users = await User.findAll();
       res.status(200).json(users);
     } catch (error) {
       console.log(error);
@@ -20,11 +17,8 @@ class UserController {
   //find user by id
   static async findById(req, res) {
     try {
-      const { db } = MongoDBconnection;
       const { id } = req.params;
-      const user = await db
-        .collection("users")
-        .findOne({ _id: new ObjectId(id) }, { projection: { password: 0 } });
+      const user = await User.findbyId(id);
       res.status(200).json(user);
     } catch (error) {
       console.log(error);
@@ -40,7 +34,7 @@ class UserController {
         email,
         password,
       };
-      const user = await db.collection("users").insertOne(data);
+      const user = await User.createUser(data);
       res.status(201).json(user);
     } catch (error) {
       console.log(error);
@@ -52,9 +46,7 @@ class UserController {
     try {
       const { db } = MongoDBconnection;
       const { id } = req.params;
-      const result = await db
-        .collection("users")
-        .deleteOne({ _id: new ObjectId(id) });
+      const result = await User.deleteUser(id);
       res.status(200).json(result);
     } catch (error) {
       console.log(error);
