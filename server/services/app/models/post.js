@@ -1,5 +1,6 @@
 "use strict";
 const { Model } = require("sequelize");
+const { createSlug } = require("../helpers/slug");
 module.exports = (sequelize, DataTypes) => {
   class Post extends Model {
     /**
@@ -49,8 +50,13 @@ module.exports = (sequelize, DataTypes) => {
           notEmpty: { msg: "Category is required" },
         },
       },
-      authorId: {
+      userMongoId: {
         type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          notNull: { msg: "Author is required" },
+          notEmpty: { msg: "Author is required" },
+        },
       },
     },
     {
@@ -58,5 +64,8 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Post",
     }
   );
+  Post.beforeCreate((post) => {
+    post.slug = createSlug(post.title);
+  });
   return Post;
 };

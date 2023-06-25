@@ -34,8 +34,9 @@ module.exports = {
           key: "id",
         },
       },
-      authorId: {
-        type: Sequelize.INTEGER,
+      userMongoId: {
+        allowNull: false,
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,

@@ -8,6 +8,7 @@ async function seedUsers() {
 
   const initialUsers = [
     {
+      _id: "64971a3bff1f25b2a0213bf2",
       username: "admin",
       email: "admin@mail.com",
       password: hashPassword("12345"),

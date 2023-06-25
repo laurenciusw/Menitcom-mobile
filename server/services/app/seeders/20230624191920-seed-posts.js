@@ -6,6 +6,7 @@ module.exports = {
     const data = require("../db.json").Post;
     data.forEach((el) => {
       delete el.id;
+      el.userMongoId = "6475b5eedc2d17fb57c8f972";
       el.createdAt = el.updatedAt = new Date();
     });
     await queryInterface.bulkInsert("Posts", data);
