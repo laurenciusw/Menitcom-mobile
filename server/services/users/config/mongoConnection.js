@@ -5,7 +5,7 @@ class MongoDBconnection {
 
   static async connect() {
     let mongoClient;
-    let uri = "mongodb://0.0.0.0:27017/";
+    let uri = process.env.MONGODB_URL;
 
     try {
       mongoClient = new MongoClient(uri);

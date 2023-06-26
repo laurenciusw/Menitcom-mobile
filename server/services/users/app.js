@@ -1,6 +1,10 @@
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
 const express = require("express");
 const app = express();
-const port = 4001;
+const port = process.env.PORT || 4001;
 const MongoDBconnection = require("./config/mongoConnection");
 const UserController = require("./controllers/userController");
 
