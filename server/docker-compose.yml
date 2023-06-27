@@ -9,6 +9,7 @@ services:
         REDIS_HOST: ${REDIS_HOST}
         SERVER_USER_URL: "http://user:4001"
         SERVER_APP_URL: "http://app:4002"
+        NODE_ENV: "production"
     app:
         build: ./services/app
         ports:
@@ -22,3 +23,4 @@ services:
             - "4001:4001"
         environment:
           MONGODB_URL: ${MONGODB_URL}
+          NODE_ENV: "production"

@@ -1,6 +1,6 @@
 const MongoDBconnection = require("../config/mongoConnection");
 const { ObjectId } = require("mongodb");
-const User = require("../models/user");
+const User = require("../models/User");
 
 class UserController {
   //get all user
@@ -18,7 +18,9 @@ class UserController {
   static async findById(req, res) {
     try {
       const { id } = req.params;
+      console.log(id);
       const user = await User.findbyId(id);
+      // console.log(user);
       res.status(200).json(user);
     } catch (error) {
       console.log(error);

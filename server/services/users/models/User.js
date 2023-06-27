@@ -20,6 +20,7 @@ class User {
       { _id: new ObjectId(id) },
       { projection: { password: 0 } }
     );
+
     return user;
   }
 

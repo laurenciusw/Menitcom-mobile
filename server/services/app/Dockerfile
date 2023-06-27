@@ -1,23 +1,12 @@
-# based image yang akan digunakan
-FROM node:16.13
+FROM node:18.16.0
 
-# path di container dimana berisi codingan kita (path bebas sesuai kesepakatan bersama)
-WORKDIR /usr/local/app
+ENV NODE_ENV=production
+ENV PORT=4000
+WORKDIR /app
+COPY ["package.json", "package-lock.json", "./"]
 
-# untuk set ENV dalam aplikasi kita
-ENV PORT=4002
+RUN npm install --production
 
-# copy deps yang ada di apps ke WORKDIR
-COPY package.json package-lock.json /usr/local/app/
+COPY . .
 
-# Install npm & Mengapus cache
-RUN npm install && npm cache clean --force
-
-# 2 install setup for development
-RUN npm install -g nodemon
-
-# copy semua file & folder ke WORKDIR
-COPY ./ ./
-
-# execute apps: production
-CMD ["npm", "run", "start"]
+CMD ["npm", "start"]
