@@ -6,7 +6,7 @@ import HomeScreen from "./screens/Home";
 import DetailScreen from "./screens/Detail";
 
 const client = new ApolloClient({
-  uri: "https://568e-2a09-bac5-3a22-18be-00-277-83.ngrok-free.app/",
+  uri: "https://wlhck.site/",
   cache: new InMemoryCache(),
 });
 
@@ -20,7 +20,14 @@ export default function App() {
           <Stack.Screen
             name="Home"
             component={HomeScreen}
-            options={{ headerShown: false }}
+            options={{
+              title: "MENITCOM",
+              headerTintColor: "#fff",
+              headerTitleStyle: {
+                fontWeight: "bold",
+              },
+              headerStyle: { backgroundColor: "#21409A" },
+            }}
           />
           <Stack.Screen
             name="Detail"

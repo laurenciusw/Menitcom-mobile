@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Mobile-App",
-    "slug": "Mobile-App",
+    "slug": "menitcom",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,10 +21,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "menit.com"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ea9a164c-d251-4ec0-ad02-d1eada9b4339"
+      }
+    },
+    "owner": "whitelyric"
   }
 }

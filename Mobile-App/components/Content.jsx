@@ -50,8 +50,7 @@ export default function Content({ data, navigation }) {
                 {mainCard.content.split(" ").slice(0, 10).join(" ")}...
               </Text>
               <Text style={styles.author}>
-                {mainCard.User.username || mainCard.User.email} IN{" "}
-                {mainCard.Category.name}
+                {mainCard.User.email} IN {mainCard.Category.name}
               </Text>
             </View>
           </ImageBackground>
